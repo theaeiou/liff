@@ -80,6 +80,24 @@
       //บอกว่าอยู่บนแพล็ตฟอร์มใด iOS, android, web
       $("#os").append(liff.getOS());
       // document.getElementById("os").append(liff.getOS());
+
+      $("#language").append(liff.getLanguage());
+
+      $("#version").append(liff.getVersion());
+
+      $("#accessToken").append(liff.getAccessToken());
+
+      $("#inInClient").append(liff.isInClient());
+
+      if (liff.isInClient()) {
+        
+        $("#btnLogOut").css("display", "none");
+      }else{
+
+        $("#btnMsg").css("display", "none");
+        $("#btnScanCode").css("display", "none");
+        $("#btnClose").css("display", "none");
+      }
     }
 
     async function main() {
