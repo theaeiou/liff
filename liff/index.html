@@ -74,6 +74,14 @@
     }
 
     async function getUserProfile() {
+      const profile = await liff.getProfile();
+      $("#pictureUrl").attr("src",profile.pictureUrl);
+      $("#userId").append(profile.userId);
+      $("#statusMessage").append(profile.statusMessage);
+      $("#displayName").append(profile.displayName);
+
+      $("#decodedIDToken").append(liff.getDecodedIDToken().email);
+
     }
 
     function getEnvironment() {
