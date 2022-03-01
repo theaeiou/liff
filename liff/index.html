@@ -43,8 +43,8 @@
   </script> -->
   <script src="jquery-3.5.1.min.js"></script>
   <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
-  <script>
-
+  <script type="text/javascript">
+  $(document).ready(function(){
 
     function createUniversalLink() {
     }
@@ -77,8 +77,9 @@
     }
 
     function getEnvironment() {
-        $("#os").append(liff.getOS());
-        // document.getElementById("os").append(liff.getOS());
+      //บอกว่าอยู่บนแพล็ตฟอร์มใด iOS, android, web
+      $("#os").append(liff.getOS());
+      // document.getElementById("os").append(liff.getOS());
     }
 
     async function main() {
@@ -91,6 +92,7 @@
       // createUniversalLink()
     }
     main()
+  });
   </script>
 </body>
 </html>
