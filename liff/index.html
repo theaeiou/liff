@@ -94,8 +94,10 @@
       $("#version").append(liff.getVersion());
       // อันนี้เป็นค่าชั่วคราว เพื่อให้เรา acess ไปที่หลังบ้านของ LINE ได้
       $("#accessToken").append(liff.getAccessToken());
+      console.log(liff.getAccessToken());
       // ผู้ใช้เปิด liff จาก Line หรือ External browser --> จะได้ซ่อน Feature แล้วแต่แพล็ตฟอร์มที่เปิดได้
       $("#isInClient").append(liff.isInClient());
+      console.log(liff.isInClient());
 
       if (liff.isInClient()) {
         // Ture - คำสั่ง liff.init ถ้าเปิดจากแอพ Line มันจะ Login ให้อยู้แล้ว
