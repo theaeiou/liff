@@ -114,6 +114,11 @@
       // alert("LINE Developers x Skooldioooo")
       await liff.init({ liffId: "1656933425-yJ1EP1BV" })
       getEnvironment()
+      if (liff.isLoggedIn()) {
+        getUserProfile()
+      }else{
+        liff.login()
+      }
       // getUserProfile()
       // getContext()
       // getFriendship()
