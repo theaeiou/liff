@@ -78,10 +78,11 @@
 
     function getEnvironment() {
         $("#os").append(liff.getOS());
+        document.getElementById("os").append(liff.getOS());
     }
 
     async function main() {
-      alert("LINE Developers x Skooldio")
+      // alert("LINE Developers x Skooldio")
       await liff.init({ liffId: "1656933425-yJ1EP1BV" })
       getEnvironment()
       // getUserProfile()
