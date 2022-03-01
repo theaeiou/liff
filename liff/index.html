@@ -80,20 +80,20 @@
       //บอกว่าอยู่บนแพล็ตฟอร์มใด iOS, android, web
       $("#os").append(liff.getOS());
       // document.getElementById("os").append(liff.getOS());
-
+      //default language ของ Client
       $("#language").append(liff.getLanguage());
-
+      // Version ของ liff ที่ถูกเปิด
       $("#version").append(liff.getVersion());
-
+      // อันนี้เป็นค่าชั่วคราว เพื่อให้เรา acess ไปที่หลังบ้านของ LINE ได้
       $("#accessToken").append(liff.getAccessToken());
-
-      $("#inInClient").append(liff.isInClient());
+      // ผู้ใช้เปิด liff จาก Line หรือ External browser --> จะได้ซ่อน Feature แล้วแต่แพล็ตฟอร์มที่เปิดได้
+      $("#isInClient").append(liff.isInClient());
 
       if (liff.isInClient()) {
-        
+        // Ture - คำสั่ง liff.init ถ้าเปิดจากแอพ Line มันจะ Login ให้อยู้แล้ว
         $("#btnLogOut").css("display", "none");
       }else{
-
+        // False - 3 ปุ่มนี้ทำไม่ได้ถ้าเปิดจาก External browser
         $("#btnMsg").css("display", "none");
         $("#btnScanCode").css("display", "none");
         $("#btnClose").css("display", "none");
