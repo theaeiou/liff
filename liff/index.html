@@ -45,9 +45,6 @@
   <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
   <script>
 
-    function getEnvironment(){
-        $("#os").append(liff.getOS());
-    }
 
     function createUniversalLink() {
     }
@@ -80,12 +77,13 @@
     }
 
     function getEnvironment() {
+        $("#os").append(liff.getOS());
     }
 
     async function main() {
       alert("LINE Developers x Skooldio")
       await liff.init({ liffId: "1656933425-yJ1EP1BV" })
-      // getEnvironment()
+      getEnvironment()
       // getUserProfile()
       // getContext()
       // getFriendship()
